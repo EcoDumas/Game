@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="854.0" prefWidth="1274.0" style="-fx-background-color: #4E4E4E;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controller.Controller">
+    <children>
+        <Pane layoutX="12.0" layoutY="126.0" prefHeight="694.0" prefWidth="469.0" style="-fx-background-color: #807E7E;">
+            <children>
+                <ScrollPane layoutX="469.0" prefHeight="468.0" prefWidth="793.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="794.0" style="-fx-background-color: #699bff;">
+                            <children>
+                                <TableView fx:id="table" layoutX="1.0" prefHeight="489.0" prefWidth="869.0" style="-fx-background-color: #ebe4d8;">
+                                    <columns>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+        <Pane layoutX="26.0" layoutY="126.0" prefHeight="694.0" prefWidth="455.0" style="-fx-background-color: #807E7E;">
+            <children>
+                <TextField fx:id="name" layoutX="14.0" layoutY="64.0" prefHeight="25.0" prefWidth="415.0" promptText="Name" style="-fx-background-color: #ebe4d8;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="age" layoutX="14.0" layoutY="116.0" prefHeight="25.0" prefWidth="415.0" promptText="Age" style="-fx-background-color: #ebe4d8;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="id" layoutX="13.0" layoutY="14.0" prefHeight="39.0" prefWidth="238.0" promptText="ID (only for delete/ update)" style="-fx-background-color: #ebe4d8;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <ComboBox fx:id="comboNum" layoutX="14.0" layoutY="259.0" prefHeight="25.0" prefWidth="345.0" promptText="Genre">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Shooter" />
+                            <String fx:value="Stealth" />
+                            <String fx:value="Survival" />
+                            <String fx:value="Battle" />
+                            <String fx:value="Rhythm" />
+                            <String fx:value="Adventure" />
+                            <String fx:value="Real-time" />
+                            <String fx:value="Action" />
+                            <String fx:value="RPG" />
+                            <String fx:value="JRPG" />
+                            <String fx:value="Life" />
+                            <String fx:value="Vehicle" />
+                            <String fx:value="Artillery" />
+                            <String fx:value="Multiplayer" />
+                            <String fx:value="Tower defense" />
+                            <String fx:value="Wargame" />
+                            <String fx:value="Racing" />
+                            <String fx:value="Board game" />
+                            <String fx:value="card game" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                <CheckBox fx:id="cb1" layoutX="47.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="128.0" selected="true" textFill="WHITE" />
+                <CheckBox fx:id="cb3" layoutX="46.0" layoutY="519.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="112.0" textFill="WHITE" />
+                <CheckBox fx:id="cb2" layoutX="227.0" layoutY="489.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="157.0" textFill="WHITE" />
+                <RadioButton fx:id="maestro" layoutX="30.0" layoutY="588.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="128.0" selected="true" text="U.S" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="location" />
+               </toggleGroup>
+            </RadioButton>
+                <RadioButton fx:id="visa" layoutX="30.0" layoutY="616.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="128.0" text="Europe" textFill="WHITE" toggleGroup="$location" />
+                <RadioButton fx:id="mastercard" layoutX="30.0" layoutY="643.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="128.0" text="Asia" textFill="WHITE" toggleGroup="$location" />
+                <Label layoutX="15.0" layoutY="379.0" prefHeight="27.0" prefWidth="97.0" text="Console:" textFill="#cdff00">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="551.0" prefHeight="27.0" prefWidth="151.0" text="Location:" textFill="#cdff00">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            <Slider fx:id="betSlider" layoutX="14.0" layoutY="338.0" majorTickUnit="10.0" minorTickCount="1" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#slider" prefHeight="14.0" prefWidth="345.0" value="1.0" />
+            <Label layoutX="15.0" layoutY="297.0" prefHeight="27.0" prefWidth="97.0" text="Price:" textFill="#cdff00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="359.0" layoutY="332.0" prefHeight="18.0" prefWidth="23.0" text=" €" textFill="#cdff00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="paypal" layoutX="283.0" layoutY="588.0" mnemonicParsing="false" text="Russia" textFill="WHITE" toggleGroup="$location" />
+            <RadioButton fx:id="sms" layoutX="283.0" layoutY="616.0" mnemonicParsing="false" text="Africa" textFill="WHITE" toggleGroup="$location" />
+            <ComboBox fx:id="Live" layoutX="14.0" layoutY="406.0" onAction="#cmbLive" prefHeight="25.0" prefWidth="345.0" promptText="Choose one:">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Playstation" />
+                        <String fx:value="Xbox" />
+                        <String fx:value="PC" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <CheckBox fx:id="cb4" layoutX="227.0" layoutY="519.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="112.0" textFill="WHITE" />
+            <Label layoutX="13.0" layoutY="453.0" text="Game:" textFill="#cdff00">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="betLabel" layoutX="384.0" layoutY="336.0" prefHeight="18.0" prefWidth="50.0" textFill="WHITE" />
+            <Text fill="#cdff00" layoutX="15.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose:" wrappingWidth="207.73672485351562">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+        <Label fx:id="userShow" layoutX="1089.0" layoutY="52.0" onMouseClicked="#handleShowDetails" prefHeight="57.0" prefWidth="82.0" textFill="#cdff00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+        <Text fill="WHITE" layoutX="943.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logged as Admin: " />
+        <Button fx:id="logout" layoutX="1208.0" layoutY="6.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #9A9696;" text="Logout" textFill="#cdff00" />
+      <ImageView fitHeight="123.0" fitWidth="200.0" layoutX="599.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image></ImageView>
+      <Label layoutX="12.0" layoutY="-11.0" prefHeight="101.0" prefWidth="511.0" text="Games" textFill="#cdff00">
+         <font>
+            <Font name="System Bold" size="84.0" />
+         </font>
+      </Label>
+          <Label fx:id="warning" layoutX="26.0" layoutY="84.0" prefHeight="17.0" prefWidth="415.0" textFill="RED">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Label>
+          <Button fx:id="delete" layoutX="1110.0" layoutY="675.0" mnemonicParsing="false" onAction="#delete" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #807E7E;" text="DELETE" textFill="#cdff00">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+          <Button fx:id="update" layoutX="919.0" layoutY="676.0" mnemonicParsing="false" onAction="#update" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #807E7E;" text="UPDATE" textFill="#cdff00">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+          <Button fx:id="read" layoutX="722.0" layoutY="676.0" mnemonicParsing="false" onAction="#search" prefHeight="39.0" prefWidth="123.0" style="-fx-background-color: #807E7E;" text="SEARCH" textFill="#cdff00">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+          <Button fx:id="create" layoutX="514.0" layoutY="677.0" mnemonicParsing="false" onAction="#create" prefHeight="27.0" prefWidth="123.0" style="-fx-background-color: #807E7E;" text="CREATE" textFill="#cdff00">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+      
+    </children>
+</Pane>
